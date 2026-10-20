@@ -1,0 +1,515 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dog Family - Menú Digital</title>
+    <!-- FontAwesome para íconos -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Hoja de estilos externa -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <header>
+        <div class="header-logo-container">
+            <img src="img/logo original.jpeg" alt="Dog Family Logo" class="header-logo">
+        </div>
+        <p>¡Hamburguesas & Perritos!</p>
+    </header>
+
+    <div class="container">
+
+        <!-- SLIDER DE PROMOCIONES -->
+        <div class="slider-container">
+            <div class="slides" id="slider">
+                <div class="slide slide-1">
+                    <h3>🔥 ¡Bienvenidos a Dog Family!</h3>
+                    <p>Disfruta de los mejores perritos y hamburguesas</p>
+                </div>
+                <div class="slide slide-2">
+                    <h3>🍔 Combos Irresistibles</h3>
+                    <p>Pide tu favorito y recíbelo en la puerta de tu casa</p>
+                </div>
+                <div class="slide slide-3">
+                    <h3>🛵 Servicio a Domicilio</h3>
+                    <p>Depende del sitio ubicado: $1.000, $2.000, $3.000 o $4.000</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- BOTONES DE NAVEGACIÓN RÁPIDA (CATEGORÍAS) -->
+        <nav class="category-buttons">
+            <button class="btn-category" onclick="scrollToCategory('sec-dogs')">
+                <i class="fas fa-hotdog"></i> Perritos
+            </button>
+            <button class="btn-category" onclick="scrollToCategory('sec-burgers')">
+                <i class="fas fa-hamburger"></i> Hamburguesas
+            </button>
+            <button class="btn-category" onclick="scrollToCategory('sec-drinks')">
+                <i class="fas fa-glass-whiskey"></i> Bebidas
+            </button>
+        </nav>
+
+        <!-- ==================== PERRITOS ==================== -->
+        <h2 class="section-title" id="sec-dogs">🌭 Perritos</h2>
+        <div class="grid">
+            
+            <div class="product-card" data-id="1" data-name="Perrito sencillo" data-price="4000">
+                <div class="product-img-container">
+                    <img src="img/perrito sencillo.jpeg" alt="Perrito sencillo" class="product-img">
+                </div>
+                <div class="product-info">
+                    <div class="product-title">Perrito sencillo</div>
+                    <div class="product-desc">Salchicha tradicional, ripio y salsas.</div>
+                    <div class="product-footer">
+                        <span class="product-price">$4.000</span>
+                        <button class="btn-add" onclick="addFromDOM(this)"><i class="fas fa-plus"></i> Agregar</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product-card" data-id="2" data-name="Perrito con tocineta" data-price="5000">
+                <div class="product-img-container">
+                    <img src="img/perrito con tocineta.jpeg" alt="Perrito con tocineta" class="product-img">
+                </div>
+                <div class="product-info">
+                    <div class="product-title">Perrito con tocineta</div>
+                    <div class="product-desc">Salchicha, tocineta crujiente y salsas.</div>
+                    <div class="product-footer">
+                        <span class="product-price">$5.000</span>
+                        <button class="btn-add" onclick="addFromDOM(this)"><i class="fas fa-plus"></i> Agregar</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product-card" data-id="3" data-name="Perrito sencillo gratinado" data-price="5000">
+                <div class="product-img-container">
+                    <img src="img/perrito sencillo gratinado.jpeg" alt="Perrito sencillo gratinado" class="product-img">
+                </div>
+                <div class="product-info">
+                    <div class="product-title">Perrito sencillo gratinado</div>
+                    <div class="product-desc">Salchicha, queso gratinado y salsas.</div>
+                    <div class="product-footer">
+                        <span class="product-price">$5.000</span>
+                        <button class="btn-add" onclick="addFromDOM(this)"><i class="fas fa-plus"></i> Agregar</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product-card" data-id="4" data-name="Perrito sencillo gratinado + tocineta" data-price="6000">
+                <div class="product-img-container">
+                    <img src="img/perrito gratinado mas tocineta.jpeg" alt="Perrito sencillo gratinado + tocineta" class="product-img">
+                </div>
+                <div class="product-info">
+                    <div class="product-title">Perrito sencillo gratinado + tocineta</div>
+                    <div class="product-desc">Salchicha, queso gratinado y tocineta.</div>
+                    <div class="product-footer">
+                        <span class="product-price">$6.000</span>
+                        <button class="btn-add" onclick="addFromDOM(this)"><i class="fas fa-plus"></i> Agregar</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product-card" data-id="5" data-name="Perrito doble salchicha" data-price="5500">
+                <div class="product-img-container">
+                    <img src="img/perro doble pequeño.jpeg" alt="Perrito doble salchicha" class="product-img">
+                </div>
+                <div class="product-info">
+                    <div class="product-title">Perrito doble salchicha</div>
+                    <div class="product-desc">Doble salchicha y salsas.</div>
+                    <div class="product-footer">
+                        <span class="product-price">$5.500</span>
+                        <button class="btn-add" onclick="addFromDOM(this)"><i class="fas fa-plus"></i> Agregar</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product-card" data-id="6" data-name="Perrito doble salchicha + tocineta" data-price="6500">
+                <div class="product-img-container">
+                    <img src="img/perro doble mas tocineta.jpeg" alt="Perrito doble salchicha + tocineta" class="product-img">
+                </div>
+                <div class="product-info">
+                    <div class="product-title">Perrito doble salchicha + tocineta</div>
+                    <div class="product-desc">Doble salchicha y tocineta.</div>
+                    <div class="product-footer">
+                        <span class="product-price">$6.500</span>
+                        <button class="btn-add" onclick="addFromDOM(this)"><i class="fas fa-plus"></i> Agregar</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product-card" data-id="7" data-name="Perrito doble gratinado" data-price="6500">
+                <div class="product-img-container">
+                    <img src="img/perrito doble gratinado.jpeg" alt="Perrito doble gratinado" class="product-img">
+                </div>
+                <div class="product-info">
+                    <div class="product-title">Perrito doble gratinado</div>
+                    <div class="product-desc">Doble salchicha con queso gratinado.</div>
+                    <div class="product-footer">
+                        <span class="product-price">$6.500</span>
+                        <button class="btn-add" onclick="addFromDOM(this)"><i class="fas fa-plus"></i> Agregar</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product-card" data-id="8" data-name="Perrito doble gratinado + tocineta" data-price="7500">
+                <div class="product-img-container">
+                    <img src="img/perro doble salchicha gratinado mas tocineta.jpeg" alt="Perrito doble gratinado + tocineta" class="product-img">
+                </div>
+                <div class="product-info">
+                    <div class="product-title">Perrito doble gratinado + tocineta</div>
+                    <div class="product-desc">Doble salchicha, gratinado y tocineta.</div>
+                    <div class="product-footer">
+                        <span class="product-price">$7.500</span>
+                        <button class="btn-add" onclick="addFromDOM(this)"><i class="fas fa-plus"></i> Agregar</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product-card" data-id="9" data-name="Perrito suizo sencillo" data-price="9000">
+                <div class="product-img-container">
+                    <img src="img/suizo sencillo.jpeg" alt="Perrito suizo sencillo" class="product-img">
+                </div>
+                <div class="product-info">
+                    <div class="product-title">Perrito suizo sencillo</div>
+                    <div class="product-desc">Salchicha suiza tradicional.</div>
+                    <div class="product-footer">
+                        <span class="product-price">$9.000</span>
+                        <button class="btn-add" onclick="addFromDOM(this)"><i class="fas fa-plus"></i> Agregar</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product-card" data-id="10" data-name="Perrito suizo gratinado" data-price="10000">
+                <div class="product-img-container">
+                    <img src="img/suizo gratinado.jpeg" alt="Perrito suizo gratinado" class="product-img">
+                </div>
+                <div class="product-info">
+                    <div class="product-title">Perrito suizo gratinado</div>
+                    <div class="product-desc">Salchicha suiza con queso gratinado.</div>
+                    <div class="product-footer">
+                        <span class="product-price">$10.000</span>
+                        <button class="btn-add" onclick="addFromDOM(this)"><i class="fas fa-plus"></i> Agregar</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product-card" data-id="11" data-name="Perrito suizo gratinado + tocineta" data-price="11000">
+                <div class="product-img-container">
+                    <img src="img/suizo gratinado mas tocineta.jpeg" alt="Perrito suizo gratinado + tocineta" class="product-img">
+                </div>
+                <div class="product-info">
+                    <div class="product-title">Perrito suizo gratinado + tocineta</div>
+                    <div class="product-desc">Salchicha suiza, gratinada y tocineta.</div>
+                    <div class="product-footer">
+                        <span class="product-price">$11.000</span>
+                        <button class="btn-add" onclick="addFromDOM(this)"><i class="fas fa-plus"></i> Agregar</button>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- ==================== HAMBURGUESAS ==================== -->
+        <h2 class="section-title" id="sec-burgers">🍔 Hamburguesas</h2>
+        <div class="grid">
+
+            <div class="product-card" data-id="12" data-name="Hamburguesa sencilla" data-price="5000">
+                <div class="product-img-container">
+                    <img src="img/hamburguesa sencilla.png" alt="Hamburguesa sencilla" class="product-img">
+                </div>
+                <div class="product-info">
+                    <div class="product-title">Hamburguesa sencilla</div>
+                    <div class="product-desc">Carne, lechuga, tomate y salsas.</div>
+                    <div class="product-footer">
+                        <span class="product-price">$5.000</span>
+                        <button class="btn-add" onclick="addFromDOM(this)"><i class="fas fa-plus"></i> Agregar</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product-card" data-id="13" data-name="Hamburguesa sencilla gratinada" data-price="6000">
+                <div class="product-img-container">
+                    <img src="img/hamburguesa gratinada.jpeg" alt="Hamburguesa sencilla gratinada" class="product-img">
+                </div>
+                <div class="product-info">
+                    <div class="product-title">Hamburguesa sencilla gratinada</div>
+                    <div class="product-desc">Carne y queso gratinado.</div>
+                    <div class="product-footer">
+                        <span class="product-price">$6.000</span>
+                        <button class="btn-add" onclick="addFromDOM(this)"><i class="fas fa-plus"></i> Agregar</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product-card" data-id="14" data-name="Hamburguesa sencilla + tocineta" data-price="6000">
+                <div class="product-img-container">
+                    <img src="img/hamburguesa mas tocineta.png" alt="Hamburguesa sencilla + tocineta" class="product-img">
+                </div>
+                <div class="product-info">
+                    <div class="product-title">Hamburguesa sencilla + tocineta</div>
+                    <div class="product-desc">Carne y tocineta crujiente.</div>
+                    <div class="product-footer">
+                        <span class="product-price">$6.000</span>
+                        <button class="btn-add" onclick="addFromDOM(this)"><i class="fas fa-plus"></i> Agregar</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product-card" data-id="15" data-name="Hamburguesa sencilla + tocineta gratinada" data-price="7000">
+                <div class="product-img-container">
+                    <img src="img/hamburguesa gratinada mas tocineta.png" alt="Hamburguesa sencilla + tocineta gratinada" class="product-img">
+                </div>
+                <div class="product-info">
+                    <div class="product-title">Hamburguesa sencilla + tocineta gratinada</div>
+                    <div class="product-desc">Carne, tocineta y queso gratinado.</div>
+                    <div class="product-footer">
+                        <span class="product-price">$7.000</span>
+                        <button class="btn-add" onclick="addFromDOM(this)"><i class="fas fa-plus"></i> Agregar</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product-card" data-id="16" data-name="Hamburguesa doble carne" data-price="8000">
+                <div class="product-img-container">
+                    <img src="img/hamburguesa doble carne.jpeg" alt="Hamburguesa doble carne" class="product-img">
+                </div>
+                <div class="product-info">
+                    <div class="product-title">Hamburguesa doble carne</div>
+                    <div class="product-desc">Doble porción de carne y salsas.</div>
+                    <div class="product-footer">
+                        <span class="product-price">$8.000</span>
+                        <button class="btn-add" onclick="addFromDOM(this)"><i class="fas fa-plus"></i> Agregar</button>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- ==================== BEBIDAS ==================== -->
+        <h2 class="section-title" id="sec-drinks">🥤 Bebidas</h2>
+        <div class="grid">
+
+            <div class="product-card" data-id="17" data-name="Coca-Cola Litro" data-price="8000">
+                <div class="product-img-container">
+                    <img src="img/litro coca cola 1.5.png" alt="Coca-Cola Litro" class="product-img">
+                </div>
+                <div class="product-info">
+                    <div class="product-title">Coca-Cola Litro</div>
+                    <div class="product-desc">Presentación de litro.</div>
+                    <div class="product-footer">
+                        <span class="product-price">$8.000</span>
+                        <button class="btn-add" onclick="addFromDOM(this)"><i class="fas fa-plus"></i> Agregar</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product-card" data-id="18" data-name="Coca-Cola Personal" data-price="4000">
+                <div class="product-img-container">
+                    <img src="img/coca cola 400 personal.png" alt="Coca-Cola Personal" class="product-img">
+                </div>
+                <div class="product-info">
+                    <div class="product-title">Coca-Cola Personal</div>
+                    <div class="product-desc">Botella personal.</div>
+                    <div class="product-footer">
+                        <span class="product-price">$4.000</span>
+                        <button class="btn-add" onclick="addFromDOM(this)"><i class="fas fa-plus"></i> Agregar</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product-card" data-id="19" data-name="Coca-Cola Pequeña" data-price="2500">
+                <div class="product-img-container">
+                    <img src="img/coca cola 250 pequeña.png" alt="Coca-Cola Pequeña" class="product-img">
+                </div>
+                <div class="product-info">
+                    <div class="product-title">Coca-Cola Pequeña</div>
+                    <div class="product-desc">Presentación pequeña.</div>
+                    <div class="product-footer">
+                        <span class="product-price">$2.500</span>
+                        <button class="btn-add" onclick="addFromDOM(this)"><i class="fas fa-plus"></i> Agregar</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product-card" data-id="20" data-name="Hit Litros" data-price="6000">
+                <div class="product-img-container">
+                    <img src="img/litro botella hit.png" alt="Hit Litros" class="product-img">
+                </div>
+                <div class="product-info">
+                    <div class="product-title">Hit Litros</div>
+                    <div class="product-desc">Jugo Hit de litro.</div>
+                    <div class="product-footer">
+                        <span class="product-price">$6.000</span>
+                        <button class="btn-add" onclick="addFromDOM(this)"><i class="fas fa-plus"></i> Agregar</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product-card" data-id="21" data-name="Hit Personal" data-price="4000">
+                <div class="product-img-container">
+                    <img src="img/jugo hit 400 personal.png" alt="Hit Personal" class="product-img">
+                </div>
+                <div class="product-info">
+                    <div class="product-title">Hit Personal</div>
+                    <div class="product-desc">Jugo Hit personal.</div>
+                    <div class="product-footer">
+                        <span class="product-price">$4.000</span>
+                        <button class="btn-add" onclick="addFromDOM(this)"><i class="fas fa-plus"></i> Agregar</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product-card" data-id="22" data-name="Postobón Personal" data-price="3500">
+                <div class="product-img-container">
+                    <img src="img/postobon 400 personal.png" alt="Postobón Personal" class="product-img">
+                </div>
+                <div class="product-info">
+                    <div class="product-title">Postobón Personal</div>
+                    <div class="product-desc">Gaseosa Postobón personal.</div>
+                    <div class="product-footer">
+                        <span class="product-price">$3.500</span>
+                        <button class="btn-add" onclick="addFromDOM(this)"><i class="fas fa-plus"></i> Agregar</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product-card" data-id="24" data-name="Postobón Pequeña" data-price="2000">
+                <div class="product-img-container">
+                    <img src="img/postobon 250 pequeña.png" alt="Postobón Pequeña" class="product-img">
+                </div>
+                <div class="product-info">
+                    <div class="product-title">Postobón Pequeña</div>
+                    <div class="product-desc">Presentación pequeña de Postobón.</div>
+                    <div class="product-footer">
+                        <span class="product-price">$2.000</span>
+                        <button class="btn-add" onclick="addFromDOM(this)"><i class="fas fa-plus"></i> Agregar</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product-card" data-id="25" data-name="Postobón Sin Azúcar" data-price="2000">
+                <div class="product-img-container">
+                    <img src="img/postobon sin azucar pequeña.png" alt="Postobón Sin Azúcar" class="product-img">
+                </div>
+                <div class="product-info">
+                    <div class="product-title">Postobón Sin Azúcar</div>
+                    <div class="product-desc">Gaseosa Postobón 0% Azúcar.</div>
+                    <div class="product-footer">
+                        <span class="product-price">$2.000</span>
+                        <button class="btn-add" onclick="addFromDOM(this)"><i class="fas fa-plus"></i> Agregar</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product-card" data-id="23" data-name="Postobón Litro" data-price="5000">
+                <div class="product-img-container">
+                    <img src="img/litros postobon.png" alt="Postobón Litro" class="product-img">
+                </div>
+                <div class="product-info">
+                    <div class="product-title">Postobón Litro</div>
+                    <div class="product-desc">Gaseosa Postobón de litro.</div>
+                    <div class="product-footer">
+                        <span class="product-price">$5.000</span>
+                        <button class="btn-add" onclick="addFromDOM(this)"><i class="fas fa-plus"></i> Agregar</button>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <!-- ==================== PIE DE PÁGINA (FOOTER) ==================== -->
+        <footer class="site-footer">
+            <div class="footer-content">
+                <img src="img/logo original.jpeg" alt="Dog Family Logo" class="footer-logo">
+                <h3>Dog Family</h3>
+                <p class="footer-tagline">¡Gracias por preferirnos! Los mejores perritos y hamburguesas a tu servicio.</p>
+                <div class="footer-badge">
+                    <i class="fas fa-heart"></i> Hecho con sabor para ti
+                </div>
+            </div>
+        </footer>
+
+    <!-- PANEL LATERAL DERECHO (CARRITO DESPLEGABLE) -->
+    <div class="cart-drawer-overlay" id="cart-drawer-overlay" onclick="toggleCartDrawer(false)"></div>
+    <div class="cart-drawer" id="cart-drawer">
+        <div class="drawer-header">
+            <h2>🛒 Tu Pedido</h2>
+            <div class="drawer-actions">
+                <button class="btn-clear" onclick="clearCart()" title="Vaciar Pedido">
+                    <i class="fas fa-trash-alt"></i>
+                </button>
+                <i class="fas fa-times close-drawer-btn" onclick="toggleCartDrawer(false)"></i>
+            </div>
+        </div>
+
+        <div id="drawer-cart-list" class="cart-list-drawer">
+            <!-- Dinámico -->
+        </div>
+
+        <div class="drawer-form">
+            <div class="form-group">
+                <label for="delivery-zone"><i class="fas fa-motorcycle"></i> Valor Domicilio:</label>
+                <select id="delivery-zone" onchange="renderCart()">
+                    <option value="1000">Domicilio - $1.000</option>
+                    <option value="2000">Domicilio - $2.000</option>
+                    <option value="3000">Domicilio - $3.000</option>
+                    <option value="4000">Domicilio - $4.000</option>
+                </select>
+                <small class="delivery-note">📍 Depende del sitio/barrio donde estés ($1.000, $2.000, $3.000 o $4.000).</small>
+            </div>
+
+            <div class="form-group">
+                <label for="client-name"><i class="fas fa-user"></i> Nombre Completo:</label>
+                <input type="text" id="client-name" placeholder="Ej: Juan Pérez">
+            </div>
+
+            <div class="form-group">
+                <label for="client-phone"><i class="fas fa-phone-alt"></i> Teléfono / WhatsApp:</label>
+                <input type="tel" id="client-phone" placeholder="Ej: 300 123 4567">
+            </div>
+
+            <div class="form-group">
+                <label for="client-address"><i class="fas fa-map-marker-alt"></i> Dirección de Entrega:</label>
+                <input type="text" id="client-address" placeholder="Ej: Calle 15 # 22 - 10">
+            </div>
+
+           <div class="form-group">
+                <label for="payment-method"><i class="fas fa-wallet"></i> Método de Pago:</label>
+                <select id="payment-method">
+                    <option value="Efectivo">Efectivo</option>
+                    <option value="Transferencia Nequi (300 000 0000)">Transferencia (Nequi)</option>
+                </select>
+                <!-- NOTA VISUAL CON EL NÚMERO DE NEQUI -->
+                <small class="delivery-note" style="color: var(--secondary); margin-top: 6px; display: block;">
+                    📲 <strong>Nequi Dog Family:</strong> 3117048150 cris val
+                </small>
+            </div>
+
+        <div class="drawer-totals">
+            <div class="total-row"><span>Subtotal:</span> <span class="num-big">$<span id="drawer-subtotal">0</span></span></div>
+            <div class="total-row"><span>Domicilio:</span> <span class="num-big">$<span id="drawer-delivery">1.000</span></span></div>
+            <hr>
+            <div class="total-row final-total"><span>Total a Pagar:</span> <span class="num-huge">$<span id="drawer-total">0</span></span></div>
+        </div>
+
+        <button class="btn-whatsapp" onclick="sendWhatsApp()">
+            <i class="fab fa-whatsapp"></i> Confirmar Pedido por WhatsApp
+        </button>
+    </div>
+
+    <!-- BARRA FLOTANTE INFERIOR -->
+    <div class="cart-bar" id="cart-bar">
+        <div class="cart-info">
+            Total: <span class="bar-total-num">$<span id="bar-total">0</span></span>
+        </div>
+        <button class="btn-checkout" onclick="toggleCartDrawer(true)">
+            <i class="fas fa-shopping-cart"></i> Ver Pedido (<span id="cart-count">0</span>)
+        </button>
+    </div>
+
+    <!-- Script JavaScript externo -->
+    <script src="js/script.js"></script>
+</body>
+</html>
